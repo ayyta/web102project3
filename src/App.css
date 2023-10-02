@@ -1,0 +1,54 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-image: url('https://images.pexels.com/photos/3151191/pexels-photo-3151191.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat; /* Adjust as needed */
+}
+
+.intro-container h1 {
+  font-size: 45px;
+}
+
+.intro-container h2 {
+  font-size: 25px;
+}
+
+.intro-container h3 {
+  font-size: 35px;
+}
+
+.card-container {
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(102, 204, 153, 0.4);
+  user-select: none;
+
+}
+
+.front img {
+  width: 400px;
+}
+
+.back p {
+  font-size: 80px;
+  color: black;
+}
+
+.go-button {
+  width: 100px;
+  height: 50px;
+  margin: .5% 2%;
+}
+
