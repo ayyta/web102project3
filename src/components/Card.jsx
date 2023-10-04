@@ -2,7 +2,7 @@ import { useState } from "react";
 import InputBox from "./InputBox";
 
 
-const flagsData = [
+let flagsData = [
   {
     name: 'Austria',
     img: 'https://www.worldometers.info/img/flags/small/tn_au-flag.gif'
@@ -105,15 +105,29 @@ const Card = () => {
     }
   }
 
+
+  const shuffle = () => {
+    const currentCardData = flagsData.splice(index, 1)[0];
+    setIndex(0);
+    setState('front');
+    setCard(<FrontCard img={currentCardData.img}/>);
+
+    flagsData = [...flagsData].sort(()=> Math.random() - 0.5);
+    flagsData.unshift(currentCardData);
+
+  }
+
   return (
   <div>
     <div className="card-container" onClick={changeSide}>
       {card}
     </div>
     
-    <InputBox/>
+    <InputBox name={flagsData[index].name}/>
     <button className="go-button" onClick={goBack}>←</button>
-    <button className="go-button" onClick={goFoward}>→</button>
+    <button className="go-button" onClick={goFoward}>→</button> 
+
+    <button className="shuffle"onClick={shuffle}>Shuffle Cards</button>
 
   </div>
 

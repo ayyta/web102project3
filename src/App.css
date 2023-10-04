@@ -46,9 +46,12 @@ body {
   color: black;
 }
 
-.go-button {
+.go-button, .shuffle {
   width: 100px;
   height: 50px;
   margin: .5% 2%;
 }
 
+.highlight {
+  border: 5px solid green !important;
+}
